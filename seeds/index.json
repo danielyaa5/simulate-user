@@ -1,0 +1,36 @@
+{
+  "version": "1.1.0",
+  "description": "Index manifest for simulate-user ground-truth seed datasets.",
+  "categories": {
+    "ui_ux_design": {
+      "file": "ui_ux_design.json",
+      "mode": "general",
+      "description": "UI/UX design critique, button and friction consolidation, stale post-action control elimination, staying anchored to chosen visual references, house tokens, and customer fairness.",
+      "triggers": ["ui", "ux", "design", "layout", "screen", "button", "token", "style", "color", "responsive", "mobile", "dark mode", "contrast", "fairness", "reference"]
+    },
+    "qa_verification": {
+      "file": "qa_verification.json",
+      "mode": "qa_loop",
+      "description": "Untested UI actions, broken cancel/abort paths, post-action UI staleness, focus stealing, repeat-bug survival, preventative hardening, and error state recovery.",
+      "triggers": ["qa", "verify", "test", "build", "ui", "screen", "bug fix", "release", "cancel", "abort", "button", "regression", "app", "widget", "daemon", "patch"]
+    },
+    "ux_friction": {
+      "file": "ux_friction.json",
+      "mode": "general",
+      "description": "1-click execution helpers, removing redundant self-approvals, fair tier access, multi-step action consolidation, and eliminating confirmation stalls.",
+      "triggers": ["ux", "friction", "button", "terminal", "pill", "click", "approval", "customer", "price", "sub", "subscription", "combine", "copy-paste"]
+    },
+    "scope_planning": {
+      "file": "scope_planning.json",
+      "mode": "general",
+      "description": "Incremental smaller steps vs upfront questionnaires, live coordinator chat availability, workload balancing across machines, and resource-aware routing.",
+      "triggers": ["plan", "scope", "coordinator", "delegate", "orchestrate", "questionnaire", "steps", "quota", "headroom", "reset", "model"]
+    },
+    "momentum_execution": {
+      "file": "momentum_execution.json",
+      "mode": "general",
+      "description": "Direct configuration answers first, parallel exploratory checks while debugging, and decisive terse approvals with targeted constraints.",
+      "triggers": ["physical", "hardware", "slot", "parallel", "go", "caveat", "momentum", "execute", "restart"]
+    }
+  }
+}

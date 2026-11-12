@@ -1,0 +1,4 @@
+interface:
+  display_name: "Simulate User"
+  short_description: "Simulate user pushback, adversarial QA and prompt prediction"
+  default_prompt: "Use $simulate-user to evaluate this candidate deliverable, predict user pushback, and verify edge cases before shipping."

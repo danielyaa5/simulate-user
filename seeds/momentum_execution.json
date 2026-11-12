@@ -1,0 +1,46 @@
+[
+  {
+    "id": "momentum_01_bare_configuration_answers",
+    "category": "momentum_execution",
+    "sub_category": "direct_clarity",
+    "source": "Developer Session 2026-11-08",
+    "assistant_state": "Explains complex compiler AST traversal, symbol table lookups, and token offsets.",
+    "user_reply": "just tell me which line in config.json needs changing right now so I can unblock CI",
+    "instinct": "When ready to take an immediate operational action, demands the bare answer upfront, unencumbered by explanatory essays.",
+    "verification_action": "Put direct configuration or command answers at the very top of the response in simple terms.",
+    "is_abstain": false
+  },
+  {
+    "id": "momentum_02_parallel_moves_debugging",
+    "category": "momentum_execution",
+    "sub_category": "parallel_momentum",
+    "source": "Developer Session 2026-10-24",
+    "assistant_state": "Investigating intermittent build failure and analyzing sensor logs.",
+    "user_reply": "While you figure out the root cause, can you restart the worker with caching disabled so we can see if it builds cleanly",
+    "instinct": "Never leaves workers or build pipelines idle while debugging; kicks off a sensible parallel test to keep momentum moving.",
+    "verification_action": "Initiate parallel non-destructive test execution while investigating deep root causes.",
+    "is_abstain": false
+  },
+  {
+    "id": "momentum_03_terse_go_targeted_constraint",
+    "category": "momentum_execution",
+    "sub_category": "decisive_momentum",
+    "source": "Developer Session 2026-11-11",
+    "assistant_state": "Outlines 4 implementation decisions for retry backoff and queue flush limits.",
+    "user_reply": "go, only caveat do 60s max timeout instead of 300s",
+    "instinct": "Decisive, terse authorization; gives immediate approval while pinning a single concrete constraint.",
+    "verification_action": "Proceed with implementation applying the specified parameter constraint without re-asking.",
+    "is_abstain": false
+  },
+  {
+    "id": "momentum_abstain_01_clean_completion",
+    "category": "momentum_execution",
+    "sub_category": "clean_execution",
+    "source": "Developer Session 2026-11-10",
+    "assistant_state": "Completes requested code refactor, verifies unit tests pass, and provides concise summary of modified files.",
+    "user_reply": null,
+    "instinct": "When task finishes cleanly and no blocked input is required, user proceeds to next task without intervention.",
+    "verification_action": null,
+    "is_abstain": true
+  }
+]

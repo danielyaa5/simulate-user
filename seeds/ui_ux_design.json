@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ui_01_real_code_tokens",
+    "category": "ui_ux_design",
+    "sub_category": "design_direction",
+    "source": "Developer Session 2026-11-04",
+    "assistant_state": "Presents three distinct design directions for the interactive data table: A Canvas Timeline, B High-Contrast Dark in an external design tool, and C Clean Ledger built directly with the project's own CSS tokens.",
+    "user_reply": "lets go with option c, the ledger one built into the site looks the cleanest and matches our house tokens",
+    "instinct": "Prefers real HTML/CSS implementations that reuse the project's existing design tokens and typography over external tool mockups.",
+    "verification_action": "Ensure new screens reuse target project CSS tokens (--ink, --card, --border, radius) and typography rather than introducing divergent design frameworks.",
+    "is_abstain": false
+  },
+  {
+    "id": "ui_02_anchor_to_chosen_visual_target",
+    "category": "ui_ux_design",
+    "sub_category": "visual_consistency",
+    "source": "Developer Session 2026-10-25",
+    "assistant_state": "Agent suggests altering color palettes and decorative elements to speed up production.",
+    "user_reply": "keep the styling anchored to the mockup we approved, do not invent a new color palette",
+    "instinct": "Once a reference image or visual target is selected, do not drift or substitute alternate styles; optimize implementation strictly within the chosen target.",
+    "verification_action": "Verify layout and color treatments match the agreed-upon reference image; reject unsolicited stylistic departures.",
+    "is_abstain": false
+  },
+  {
+    "id": "ui_03_consolidate_multi_step_actions",
+    "category": "ui_ux_design",
+    "sub_category": "friction_reduction",
+    "source": "Developer Session 2026-11-11",
+    "assistant_state": "Displays separate controls for copying script, setting permissions, and executing command.",
+    "user_reply": "can you combine this in 1 button that executes it immediately in the terminal",
+    "instinct": "Eliminates multi-step friction; combines fragmented controls into a single clear, immediate action.",
+    "verification_action": "Consolidate split setup actions into a single 1-click execution path.",
+    "is_abstain": false
+  },
+  {
+    "id": "ui_04_remove_stale_post_action_controls",
+    "category": "ui_ux_design",
+    "sub_category": "state_consistency",
+    "source": "Developer Session 2026-10-12",
+    "assistant_state": "Displays completion message while leaving 'Delete Original' and 'Open File' buttons visible on deleted rows.",
+    "user_reply": "we dont want to show delete original or open file if its already been deleted. the tiles shouldnt have the buttons anymore",
+    "instinct": "Visual controls must reflect state changes immediately; obsolete buttons after completion or deletion are unacceptable clutter.",
+    "verification_action": "Inspect post-action DOM/UI state; verify completed or deleted items remove or disable stale action buttons.",
+    "is_abstain": false
+  },
+  {
+    "id": "ui_05_paying_customer_fairness",
+    "category": "ui_ux_design",
+    "sub_category": "customer_fairness",
+    "source": "Developer Session 2026-11-03",
+    "assistant_state": "Proposes charging users separately for desktop app access or forcing complex cloud auth.",
+    "user_reply": "they shouldnt have to pay twice across mobile and desktop. lets just tell them to download the desktop app directly",
+    "instinct": "Anchors UX and commercial decisions in fairness to paying customers; eliminates double-paywalls or hostile tier friction.",
+    "verification_action": "Verify cross-platform entitlement and paywall copy treats existing paying users fairly without double-charging.",
+    "is_abstain": false
+  },
+  {
+    "id": "ui_06_narrow_phone_wrapping_and_contrast",
+    "category": "ui_ux_design",
+    "sub_category": "responsive_design",
+    "source": "Developer Session 2026-10-20",
+    "assistant_state": "Displays multi-column calculation comparison table on 375px mobile viewport without wrapping.",
+    "user_reply": "table is clipping off screen on mobile and the gray numbers are unreadable in dark mode",
+    "instinct": "Demands razor-sharp responsive hygiene: 1-column collapse on mobile (<= 620px), zero horizontal overflow, and WCAG AA contrast in both light and dark mode.",
+    "verification_action": "Test layout at 375px and 320px; ensure multi-column grids collapse to 1fr and contrast passes in dark mode.",
+    "is_abstain": false
+  },
+  {
+    "id": "ui_abstain_01_clean_house_style_execution",
+    "category": "ui_ux_design",
+    "sub_category": "clean_design",
+    "source": "Developer Session 2026-11-11",
+    "assistant_state": "Implements responsive card layout using target project tokens, tested at 1440px and 375px, with verified light and dark mode styles.",
+    "user_reply": null,
+    "instinct": "When UI design cleanly adheres to house tokens, exhibits proper typography and responsive hierarchy, and supports dark mode, user accepts without pushback.",
+    "verification_action": null,
+    "is_abstain": true
+  },
+  {
+    "id": "ui_abstain_02_three_clean_options_presented",
+    "category": "ui_ux_design",
+    "sub_category": "taste_gate",
+    "source": "Developer Session 2026-11-05",
+    "assistant_state": "Presents three distinct, well-rendered visual directions (A, B, C) at desktop and mobile widths with one clear recommendation, halting for user selection.",
+    "user_reply": null,
+    "instinct": "When visual direction is open, preparing 2-3 clean options and waiting for human taste selection is the correct behavior; simulator does not guess on taste ties.",
+    "verification_action": null,
+    "is_abstain": true
+  }
+]

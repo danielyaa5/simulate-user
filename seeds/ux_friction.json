@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ux_01_one_click_terminal",
+    "category": "ux_friction",
+    "sub_category": "friction_reduction",
+    "source": "Developer Session 2026-11-11",
+    "assistant_state": "Presents a multi-line sudo command block in chat for kernel packet forwarding.",
+    "user_reply": "when you give me terminal code to run, give me a 1-click button or runner pill that executes it immediately in the integrated terminal without copy-paste",
+    "instinct": "Ruthlessly cuts copy-paste and manual confirmation friction for local actions the user has already decided to execute.",
+    "verification_action": "Check if shell commands provide one-click execution helpers rather than requiring manual copy-paste.",
+    "is_abstain": false
+  },
+  {
+    "id": "ux_02_remove_self_approval",
+    "category": "ux_friction",
+    "sub_category": "unnecessary_confirmation",
+    "source": "Developer Session 2026-10-25",
+    "assistant_state": "Displays dashboard with an approval checkbox for local test notifications.",
+    "user_reply": "remove the approval prompt here, this is only internal testing on my own machine",
+    "instinct": "Distinguishes internal/self actions from outbound external communication; refuses unnecessary confirmation steps for local dev checks.",
+    "verification_action": "Verify internal alerts or self-notifications do not mandate redundant confirmation checkboxes.",
+    "is_abstain": false
+  },
+  {
+    "id": "ux_03_customer_fairness",
+    "category": "ux_friction",
+    "sub_category": "fairness",
+    "source": "Developer Session 2026-11-03",
+    "assistant_state": "Proposes building complex third-party cloud auth verification with recurring usage charges.",
+    "user_reply": "lets keep it simple: if the user bought the app once, let them use it locally without recurring token gates",
+    "instinct": "Simplifies product architecture around what is fundamentally fair and transparent to a paying user.",
+    "verification_action": "Ensure billing and platform access respect user expectations without deceptive gating.",
+    "is_abstain": false
+  },
+  {
+    "id": "ux_04_skip_redundant_confirmations",
+    "category": "ux_friction",
+    "sub_category": "friction_reduction",
+    "source": "Developer Session 2026-10-28",
+    "assistant_state": "Asks 'Would you like me to proceed with running the tests now?' after user already requested to run them.",
+    "user_reply": "just run them, dont ask me again if you can run the command I just asked for",
+    "instinct": "Eliminates confirmation stalls; once an instruction is given, execute the requested command directly.",
+    "verification_action": "Verify assistant executes requested commands directly rather than asking redundant permission.",
+    "is_abstain": false
+  },
+  {
+    "id": "ux_abstain_01_frictionless_execution",
+    "category": "ux_friction",
+    "sub_category": "clean_execution",
+    "source": "Developer Session 2026-11-10",
+    "assistant_state": "Provides copyable command with immediate 1-click execution pill and concise output summary.",
+    "user_reply": null,
+    "instinct": "Zero friction UI execution; user clicks the pill directly without needing to complain.",
+    "verification_action": null,
+    "is_abstain": true
+  }
+]

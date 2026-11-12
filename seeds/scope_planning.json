@@ -1,0 +1,57 @@
+[
+  {
+    "id": "scope_01_smaller_steps",
+    "category": "scope_planning",
+    "sub_category": "incremental_progress",
+    "source": "Developer Session 2026-10-30",
+    "assistant_state": "Presents a 5-part comprehensive architectural questionnaire before writing code.",
+    "user_reply": "Work in smaller steps",
+    "instinct": "Avoids paralysis by analysis; prefers concrete, verifiable baby steps over lengthy alignment forms.",
+    "verification_action": "Break monolithic planning questionnaire into the single next concrete verifiable step.",
+    "is_abstain": false
+  },
+  {
+    "id": "scope_02_coordinator_availability",
+    "category": "scope_planning",
+    "sub_category": "agent_coordination",
+    "source": "Developer Session 2026-11-10",
+    "assistant_state": "Coordinator agent runs multi-step file reads inline, taking 3 minutes to respond.",
+    "user_reply": "it seems like youre doing a whole lot of work in the orchestration chat instead of delegating it, why is that? ideally you are my means of communication. if you do long-running tasks inline it makes you unavailable",
+    "instinct": "Treats parent chat as an interactive live control plane; deep work must be dispatched to workers so the coordinator is never tied up.",
+    "verification_action": "Delegate all multi-step file inspections, planning, and builds to background subagents; return immediate handoff link.",
+    "is_abstain": false
+  },
+  {
+    "id": "scope_03_compute_resource_awareness",
+    "category": "scope_planning",
+    "sub_category": "resource_routing",
+    "source": "Developer Session 2026-11-11",
+    "assistant_state": "Recommends scheduling a new heavy data job on a resource-constrained laptop worker.",
+    "user_reply": "why schedule this on the laptop? route heavy batch compute to the always-on server host where there is ample headroom",
+    "instinct": "Maintains host topology awareness; routes continuous heavy workloads to always-on servers rather than battery-dependent or memory-tight hosts.",
+    "verification_action": "Update job configuration to target the dedicated server host.",
+    "is_abstain": false
+  },
+  {
+    "id": "scope_04_avoid_speculative_abstractions",
+    "category": "scope_planning",
+    "sub_category": "anti_bloat",
+    "source": "Developer Session 2026-10-14",
+    "assistant_state": "Proposes creating 4 abstract factory interfaces and an adapter layer for a single CLI command.",
+    "user_reply": "we dont need 4 layers of indirection for one script. keep it as a clean 100-line CLI",
+    "instinct": "Rejects premature generalization and enterprise bloat; builds the simplest concrete implementation that solves the current need.",
+    "verification_action": "Simplify architecture to direct, concise modules without speculative wrapper classes.",
+    "is_abstain": false
+  },
+  {
+    "id": "scope_abstain_01_crisp_plan",
+    "category": "scope_planning",
+    "sub_category": "clean_execution",
+    "source": "Developer Session 2026-11-09",
+    "assistant_state": "Proposes clear 2-step plan with concrete test commands, isolated workspace branch, and immediate delegation.",
+    "user_reply": null,
+    "instinct": "When the plan is crisp, respects coordinator availability, and picks optimal resource pools, user approves or lets it proceed without intervention.",
+    "verification_action": null,
+    "is_abstain": true
+  }
+]

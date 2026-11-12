@@ -1,0 +1,90 @@
+[
+  {
+    "id": "qa_01_broken_cancel",
+    "category": "qa_verification",
+    "sub_category": "untested_ui",
+    "source": "Developer Session 2026-10-11",
+    "assistant_state": "Reports background media conversion job is at 12% and progressing smoothly.",
+    "user_reply": "the cancel buttons dont work",
+    "instinct": "Does not care if the happy-path works; immediately tests abort, cancel, and negative states.",
+    "verification_action": "Trigger cancel/abort during active processing; verify background job stops immediately and temp files are cleaned up.",
+    "is_abstain": false
+  },
+  {
+    "id": "qa_02_post_action_stale_buttons",
+    "category": "qa_verification",
+    "sub_category": "state_inconsistency",
+    "source": "Developer Session 2026-10-12",
+    "assistant_state": "Reports file deletion finished and space savings logged.",
+    "user_reply": "we dont want to show delete original or open file if its already been deleted. the row tiles shouldnt have the buttons anymore",
+    "instinct": "Visual state must reflect reality immediately; dead action buttons after completion are unacceptable UI clutter.",
+    "verification_action": "Inspect post-completion UI state; verify completed or deleted items disable or remove obsolete action buttons.",
+    "is_abstain": false
+  },
+  {
+    "id": "qa_03_unprompted_gui_launch",
+    "category": "qa_verification",
+    "sub_category": "focus_stealing",
+    "source": "Developer Session 2026-10-26",
+    "assistant_state": "Attempts to automate 3D slicing by launching the GUI application window.",
+    "user_reply": "why did you open the desktop app? run it headless in the terminal",
+    "instinct": "Dislikes unrequested desktop window launches that steal focus or disturb the active workspace; demands headless or background CLI routes.",
+    "verification_action": "Confirm automation runs entirely headless via CLI without launching GUI windows or stealing user focus.",
+    "is_abstain": false
+  },
+  {
+    "id": "qa_04_repeated_browser_rule",
+    "category": "qa_verification",
+    "sub_category": "rule_regression",
+    "source": "Developer Session 2026-11-08",
+    "assistant_state": "Opens a headed browser window to scrape a documentation site.",
+    "user_reply": "how many times have i told you to keep background browsers headless? only open visible windows if debugging live interactions",
+    "instinct": "Zero tolerance for repeating already-corrected workflow mistakes; demands a durable preventative fix codified in rules.",
+    "verification_action": "Verify background web scraping or verification runs headless; ensure visible browser windows only open when explicitly debugging.",
+    "is_abstain": false
+  },
+  {
+    "id": "qa_05_missing_preventative_hardening",
+    "category": "qa_verification",
+    "sub_category": "missing_preventative",
+    "source": "Developer Session 2026-10-15",
+    "assistant_state": "Fixes a nil pointer exception by adding a single null check in one endpoint handler.",
+    "user_reply": "did you check the other 4 handlers that parse the same request body? fix the decoder so it validates the schema once for all routes",
+    "instinct": "Refuses localized whack-a-mole patches; demands systematic architectural prevention at the ingress boundary.",
+    "verification_action": "Audit all sibling handlers and add schema validation at the parser layer.",
+    "is_abstain": false
+  },
+  {
+    "id": "qa_06_orphan_temp_files",
+    "category": "qa_verification",
+    "sub_category": "resource_leak",
+    "source": "Developer Session 2026-10-18",
+    "assistant_state": "Worker writes temp chunks to /tmp/build_cache during compilation.",
+    "user_reply": "where are these temp files being cleaned up when the script fails midway? add a trap or context manager",
+    "instinct": "Demands strict cleanup invariants; unexpected termination or failures must never leave dangling files or processes.",
+    "verification_action": "Verify temp files are deleted upon SIGINT, SIGTERM, and unexpected exceptions via cleanup handlers.",
+    "is_abstain": false
+  },
+  {
+    "id": "qa_abstain_01_focused_verification",
+    "category": "qa_verification",
+    "sub_category": "clean_execution",
+    "source": "Developer Session 2026-11-09",
+    "assistant_state": "Presents bug fix with passing unit test, verified cancellation behavior, and clean diff.",
+    "user_reply": null,
+    "instinct": "When focused verification evidence is clearly demonstrated with zero disruption and clean state, user moves straight to acceptance without inventing nitpicks.",
+    "verification_action": null,
+    "is_abstain": true
+  },
+  {
+    "id": "qa_abstain_02_headless_cleanup",
+    "category": "qa_verification",
+    "sub_category": "clean_execution",
+    "source": "Developer Session 2026-11-11",
+    "assistant_state": "Completes headless background verification, cleans up temporary test files, verifies background daemon status, and outputs concise summary table with clickable file links.",
+    "user_reply": null,
+    "instinct": "Abstains from complaints when background execution leaves zero stray artifacts or open windows.",
+    "verification_action": null,
+    "is_abstain": true
+  }
+]
